@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+
+body{
+
+    
+    background-color: #ffeecb;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+*{
+
+    font-family: "IBM Plex Mono", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(44, 44, 44);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body{
+
+    width: 440px;
+    min-height: 100vh;
+    padding: 0px 10px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+
+    min-height: 200vh;
+    
+}
+.balance-container h3{
+
+    font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.incomeAndExpense{
+
+    width: 100%;
+    padding: 0px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.incomeAndExpense::before{
+
+    content: "";
+    width: 1px;
+    height: 60%;
+    position: absolute;
+    background-color: rgb(163, 163, 163);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.incomeAndExpense h4{
+
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.incomeAndExpense div{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.incomeAndExpense h3{
+
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.incomeAndExpense .income h3{
+
+    color: green;
+}
+
+.incomeAndExpense .expense h3{
+
+    color: red;
+}
+
+.history{
+
+    margin-top: 20px;
+
+
+}
+
+.history ul{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.history li{
+
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+    border-radius: 6px;
+    border-right: 8px solid green;
+}
+
+
+.container .footer{
+
+    display: flex;
+    height: 60px;
+    position: sticky;
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.footer div{
+
+    width: 45%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    color: #222222;
+    gap: 10px;
+}
+
+.footer .income{
+
+    background-color: rgb(162, 255, 162);
+    box-shadow: 0 0 4px rgba(0, 128, 0, 0.637);
+    border-radius: 10px;
+
+}
+
+.footer .expense{
+
+    background-color: rgb(255, 111, 111);
+    border-radius: 10px;
+}
+
+
+.addTransaction{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50%);
+    padding: 10px 50px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+    justify-content: center;
+}
+
+.addTransaction input{
+
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.addTransaction button{
+
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+.addTransaction input:hover{
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
